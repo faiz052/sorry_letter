@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Forgive Me</title>
   <style>
     body {
@@ -14,15 +14,22 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
+      height: 100%;
+      box-sizing: border-box; /* Ensure consistent padding and margin handling */
       flex-direction: column;
+      flex-wrap: wrap; /* Allow content to wrap if needed */
     }
+
+
     img {
       max-width: 100%;
       border-radius: 15px;
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
       border: 3px solid #fcd5ce;
+      max-height: 70vh; /* Limit the image height to prevent it from being too large */
     }
+
     a {
       margin-top: 20px;
       text-decoration: none;
@@ -33,9 +40,14 @@
       font-weight: bold;
       transition: background-color 0.3s, transform 0.3s;
     }
+
     a:hover {
       background-color: #e5989b;
       transform: scale(1.05);
+    }
+
+    body {
+      padding: calc(25px + env(safe-area-inset-top)) 25px calc(25px + env(safe-area-inset-bottom)) 25px;
     }
   </style>
 </head>
