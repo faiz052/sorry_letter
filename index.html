@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>wishy baby</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>wishy baby 😽</title>
   <style>
+    
     body {
       font-family: 'Arial', sans-serif;
       background: linear-gradient(135deg, #fdf2f8, #fef6e4);
@@ -14,8 +15,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
+      height: 100%;
+      box-sizing: border-box; 
+      flex-wrap: wrap; 
     }
+
+   
     .container {
       max-width: 600px;
       background-color: #ffffff;
@@ -26,25 +32,34 @@
       animation: fadeIn 2s ease-out;
       text-align: center;
       position: relative;
+      overflow-y: auto; 
+      max-height: 90vh; 
     }
+    
     h1 {
       color: #f28482;
       font-size: 2em;
       margin-bottom: 10px;
       animation: slideIn 1.5s ease-in-out;
     }
+
     p {
       margin-bottom: 15px;
       line-height: 1.6;
       font-size: 1.1em;
     }
+
+
     .emoji {
       font-size: 30px;
       margin-top: 20px;
     }
+
+
     .cta {
       margin-top: 20px;
     }
+
     .cta a {
       text-decoration: none;
       color: #ffffff;
@@ -54,10 +69,13 @@
       font-weight: bold;
       transition: background-color 0.3s, transform 0.3s;
     }
+
     .cta a:hover {
       background-color: #e5989b;
       transform: scale(1.05);
     }
+
+    /* Clock styling */
     .clock {
       font-size: 0.9em;
       font-style: italic;
@@ -67,7 +85,7 @@
       right: 10px;
     }
 
-    /* Animations */
+
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -89,6 +107,14 @@
         transform: translateX(0);
       }
     }
+
+
+    body {
+      padding: calc(25px + env(safe-area-inset-top)) 25px calc(25px + env(safe-area-inset-bottom)) 25px;
+    }
+    .container {
+      max-width: calc(100% - env(safe-area-inset-left) - env(safe-area-inset-right));
+    }
   </style>
 </head>
 <body>
@@ -97,12 +123,12 @@
   <div class="clock" id="currentTime"></div>
   <h1>I’m Sorry, My Babyyy</h1>
   <p>My prettiest girll,</p>
-  <p>I’ve been sitting here, thinking about how I acted, and my chest just aches. I was rude and insensitive, and for that, I’m truly sorry. You didn’t deserve any of it. If I could rewind time and fix the way I spoke or acted, I would do it in a heartbeat. I hate the thought of hurting you, someone who means the world to me.</p>
-  <p>I miss you so much. Every moment without you feels like something’s missing, and honestly, nothing feels right when we’re not okay. I know I messed up, and I wish I could just hold you right now and tell you how much you mean to me, how much I adore you.</p>
+  <p>I’ve been sitting here, thinking about how I acted, and my chest just aches. I was rude and insensitive, and for that, I’m truly sorry. You didn’t deserve any of it. If I could rewind time and fix the way I spoke or acted, I would do it in a heartbeat. I hate the thought of hurting you—someone who means the world to me.</p>
+  <p>I miss you so much. Every moment without you feels like something’s missing, and honestly, nothing feels right when we’re not okay. I know I messed up, and I wish I could just hold you right now and tell you how much you mean to me—how much I adore you.</p>
   <p>I promise I’ll make it up to you. You deserve all the love, care, and sweetness I can give, and I’m going to make sure you get that. Just tell me how I can make things better, and I’m all yours. Always.</p>
   <p>Please know I’m here, waiting with open arms and full of love for you.</p>
   <p class="signature">Yours always, <br> Babbu</p>
-  <p class="emoji">🥺😽❤️</p>
+  <p class="emoji">🥺❤️</p>
   <div class="cta">
     <a href="photo.html">Forgive Me?</a>
   </div>
